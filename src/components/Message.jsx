@@ -14,7 +14,7 @@ export default function Message({ message, isYou }) {
       <Grid
         templateRows="30px 1fr 25px"
         templateColumns="1fr"
-        w="70%"
+        w="100%"
         px="3"
         py="2"
         borderRadius="5px"

@@ -17,16 +17,41 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  /* background: #888; */
-  background: #3faaac;
+  background: #888;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #2c7a7b;
+  background: #2c417b;
 }
 
 a {
-  color: teal !important;
+  color: rgb(9, 18, 141) !important;
+}
+
+.chakra-button {
+  color: #2d10aa !important
+}
+
+.glow-button {
+  background-color: #5540b6 !important;
+  box-shadow: 0px 0px 20px #ff00ff !important;
+  color: #fff !important;
+  padding: 10px 20px !important;
+  /* font-size: 16px !important; */
+  border: none ;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.glow-button:hover {
+  background-color: #5540b6!important;
+  color: #ff00ff !important;
+  box-shadow: 0px 0px 20px #f9d71c !important;
+  cursor: pointer !important;
+}
+
+.glow-button:focus {
+  outline: none !important;
 }

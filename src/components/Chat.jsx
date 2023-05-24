@@ -20,7 +20,7 @@ export default function Chat() {
   }, []);
 
   return (
-    <Container maxW="600px" pb="20px">
+    <Container maxW="80%" pb="20px">
       <Box
         bg="white"
         p="5"

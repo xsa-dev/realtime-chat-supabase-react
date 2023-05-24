@@ -54,7 +54,7 @@ export default function MessageForm() {
 
   return (
     <Box py="10px" pt="15px" bg="gray.100">
-      <Container maxW="600px">
+      <Container maxW="80%">
         <form onSubmit={handleSubmit} autoComplete="off">
           <Stack direction="row">
             <Input
@@ -75,12 +75,12 @@ export default function MessageForm() {
               type="submit"
               disabled={!message}
               isLoading={isSending}
+              className="glow-button"
             />
           </Stack>
         </form>
         <Box fontSize="10px" mt="1">
-          Warning: do not share any sensitive information, it's a public chat
-          room 🙂
+        Эй, эй! Я твой лучший помощник! Но не забывай, что здесь все видят, так что не передавай никакую секретную информацию! Мы же не хотим, чтобы наш чат стал главным героем скандальной истории, верно? 😉
         </Box>
       </Container>
     </Box>

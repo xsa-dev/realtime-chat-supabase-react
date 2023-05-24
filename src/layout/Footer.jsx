@@ -1,5 +1,5 @@
 import { Box, Grid, GridItem } from "@chakra-ui/react";
-import { FaGithub, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaTelegram } from "react-icons/fa";
 import MessageForm from "../components/MessageForm";
 export default function Footer() {
   return (
@@ -15,21 +15,19 @@ export default function Footer() {
         height="40px"
         bg="white"
       >
-        <GridItem justifySelf="start">
-          {/* Built by{" "} */}
-          {/* <a href="http://shimon-wosner.vercel.app" target="_blank"> */}
+        <GridItem justifySelf="start">         
           <a
-            href="https://twitter.com/shwosner"
+            href="https://t.me/xsa_logs"
             target="_blank"
             rel="noreferrer"
           >
-            <FaTwitter style={{ display: "inline" }} />
-            @shwosner
+            <FaTelegram style={{ display: "inline" }} />
+            ... xsa_tg
           </a>
         </GridItem>
         <GridItem justifySelf="end">
           <a
-            href="https://github.com/shwosner/realtime-chat-supabase-react"
+            href="https://github.com/xsa-dev/realtime-chat-supabase-react"
             target="_blank"
             rel="noreferrer"
           >
