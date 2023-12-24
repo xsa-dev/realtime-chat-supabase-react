@@ -1,10 +1,12 @@
 import { Button, Grid, GridItem, Image } from "@chakra-ui/react";
 import { FaGithub } from "react-icons/fa";
+import supabase from "../supabaseClient";
 
 import { useAppContext } from "../context/appContext";
 import NameForm from "./NameForm";
 export default function Header() {
-  const { username, setUsername, auth, randomUsername } = useAppContext();
+  const { username, setUsername, randomUsername, session } = useAppContext();
+
   return (
     <Grid
       templateColumns="max-content 1fr min-content"
@@ -19,7 +21,7 @@ export default function Header() {
       <GridItem justifySelf="start" m="2">
         <Image src="/logo.png" height="30px" ml="2" />
       </GridItem>
-      {auth.user() ? (
+      {session ? (
         <>
           <GridItem justifySelf="end" alignSelf="center" mr="4">
             My name: <strong>{username}</strong>
@@ -29,7 +31,7 @@ export default function Header() {
             size="sm"
             variant="link"
             onClick={() => {
-              const { error } = auth.signOut();
+              const { error } = supabase.auth.signOut();
               if (error) return console.error("error signOut", error);
               const username = randomUsername();
               setUsername(username);
@@ -51,8 +53,9 @@ export default function Header() {
             rightIcon={<FaGithub />}
             variant="outline"
             onClick={() =>
-              auth.signIn({
+              supabase.auth.signInWithOAuth({
                 provider: "github",
+                redirectTo: window.location.origin,
               })
             }
           >
